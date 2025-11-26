@@ -103,6 +103,12 @@ textarea::placeholder {
     font-family: var(--fontTitle);
 }
 
+.material-symbols-outlined {
+    font-size: 20px; 
+    vertical-align: middle;
+    display: inline-block;
+}
+
 .def-title {
 	font-size: 42px;
 	font-weight: 700;
@@ -196,6 +202,10 @@ textarea::placeholder {
 .header-info img {
 	margin-right: 16px;
 	max-width: 21px;
+}
+.header-info .material-symbols-outlined {
+    margin-right: 8px;
+    color: var(--lightGreen); 
 }
 
 .header-social {
@@ -1803,6 +1813,8 @@ textarea::placeholder {
 	}
 
 	.hamburger {
+		background: none;
+    	border: none;
 		margin-left: auto;
 		cursor: pointer;
 		width: 46px; 

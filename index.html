@@ -45,7 +45,6 @@
 	<meta name="robots" content="noindex, nofollow">
 	<!-- Remove indexação por enquanto para evitar redirecionamento para o github pages-->
 
-	<meta name="robots" content="noindex, nofollow">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description"
 		content="Engeplena Engenharia - Desde 2006 no seu time. Projetos de engenharia, consultoria ambiental e plotagem em Itabirito-MG. Integridade, aprendizado e resultados.">
@@ -73,6 +72,8 @@
 	<link rel="stylesheet" href="css/magnific-popup.min.css">
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
 	<title>Engeplena Engenharia - Desde 2006 no seu time | Itabirito-MG</title>
 </head>
 
@@ -114,41 +115,46 @@
 
 					<!-- Header top mobile START -->
 					<div class="header-mobile-logo">
-						<a href="#">
-							<img src="images/Engeplena Cor.svg" alt="Engeplena Engenharia LTDA">
+						<a href="./" aria-label="Página Inicial">
+							<!-- <img src="images/Engeplena Cor.svg" alt="Engeplena Engenharia LTDA"> -->
+							<img src="images/Engeplena Cor.svg" alt="Engeplena Engenharia" width="110" height="40">
 						</a>
 					</div>
 
-					<div class="hamburger">
-						<span></span>
-						<span></span>
+					<button class="hamburger" aria-label="Abrir menu principal" aria-expanded="false" aria-controls="mobile-menu">
+						<span aria-hidden="true"></span>
+                    	<span aria-hidden="true"></span>
 					</div>
 					<!-- Header top mobile END -->
 
-					<div class="header-desc">Desde 2006 no seu time</div>
+					<!-- <div class="header-desc">Desde 2006 no seu time</div> -->
 					<div class="header-right">
-						<a href="https://maps.app.goo.gl/NcqLUbUnmhbEux4g9" class="header-info">
-							<img src="images/location.svg" alt="Endereço Engeplena">
+						<span style="align-self: left;">Desde 2006 no seu time</span>
+						<a href="https://maps.app.goo.gl/NcqLUbUnmhbEux4g9" target="_blank" rel="noopener noreferrer" class="header-info">
+							<span class="material-symbols-outlined" aria-hidden="true">location_on</span>
 							<span>R. Carlos Michel, 66, Centro - Itabirito/MG</span>
 						</a>
 
-						<a href="tel:3135613966" class="header-info">
-							<img src="images/phone.svg" alt="Telefone Engeplena">
-							<span>(31) 3561-3966 / 9 8795-0463</span>
+						<a href="tel:3135613966" class="header-info" data-track="topo-telefone">
+							<span class="material-symbols-outlined" aria-hidden="true">call</span>
+							<span>(31) 3561-3966/ (31) 98795-0463</span>
 						</a>
 
 						<div class="header-social">
-							<a href="https://wa.me/5531987950463">
-								<img src="images/social-facebook.svg" alt="Whatsapp">
+							<a href="https://wa.me/5531987950463" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp" data-track="topo-whatsapp">
+                            	<img src="images/social-facebook.svg" alt="" aria-hidden="true"> 
 							</a>
-							<a href="https://www.instagram.com/engeplena/" target="_blank" rel="noopener">
-								<img src="images/social-facebook.svg" alt="Instagram">
+                        
+							<a href="https://www.instagram.com/engeplena/" target="_blank" rel="noopener noreferrer" aria-label="Siga-nos no Instagram" data-track="topo-instagram">
+								<img src="images/social-facebook.svg" alt="" aria-hidden="true">
 							</a>
-							<a href="https://www.facebook.com/engeplena" target="_blank" rel="noopener">
-								<img src="images/social-facebook.svg" alt="Facebook">
+							
+							<a href="https://www.facebook.com/engeplena" target="_blank" rel="noopener noreferrer" aria-label="Curta nossa página no Facebook" data-track="topo-facebook">
+								<img src="images/social-facebook.svg" alt="" aria-hidden="true">
 							</a>
-							<a href="mailto:contato@engeplena.com.br">
-								<img src="images/social-facebook.svg" alt="Email">
+							
+							<a href="mailto:contato@engeplena.com.br" aria-label="Envie um Email" data-track="topo-email">
+								<span class="material-symbols-outlined" aria-hidden="true">mail</span>
 							</a>
 
 						</div>
@@ -158,32 +164,31 @@
 		</div>
 
 		<div class="header-bottom">
-			<!-- <div class="container"> -->
-				<div class="header-bottom-row">
-					<div class="header-logo">
-						<a href="#">
-							<img src="images/Engeplena Cor.svg" alt="Engeplena Engenharia LTDA">
-						</a>
-					</div>
-
-					<nav class="header-nav">
-						<ul>
-							<li><a class="anchor-link" href="#s-about">A empresa</a></li>
-							<li><a class="anchor-link" href="#s-services">Serviços</a></li>
-							<li><a class="anchor-link" href="#s-gallery">Galeria</a></li>
-							<li><a class="anchor-link" href="#s-team">Equipe</a></li>
-							<li><a class="anchor-link" href="#s-covenant">Convênio</a></li>
-							<li><a class="anchor-link" href="#s-contact">Contato</a></li>
-						</ul>
-					</nav>
+			<div class="header-bottom-row">
+				<div class="header-logo">
+					<a href="./" aria-label="Página Inicial">
+						<!-- <img src="images/Engeplena Cor.svg" alt="Engeplena Engenharia"> -->
+						<img src="images/Engeplena Cor.svg" alt="Engeplena Engenharia" width="215" height="60">
+					</a>
 				</div>
-			<!-- </div> -->
+
+				<nav class="header-nav" aria-label="Navegação Principal">
+					<ul>
+						<li><a class="anchor-link" href="#s-about">A empresa</a></li>
+						<li><a class="anchor-link" href="#s-services">Serviços</a></li>
+						<li><a class="anchor-link" href="#s-gallery">Galeria</a></li>
+						<li><a class="anchor-link" href="#s-team">Equipe</a></li>
+						<li><a class="anchor-link" href="#s-covenant">Convênio</a></li>
+						<li><a class="anchor-link" href="#s-contact">Contato</a></li>
+					</ul>
+				</nav>
+			</div>
 		</div>
 
 
 		<!-- Header mobile START -->
-		<div class="header-mobile-wrap">
-			<nav class="header-mobile-nav">
+		<div class="header-mobile-wrap" id="mobile-menu">
+			<nav class="header-mobile-nav" aria-label="Navegação Mobile">
 				<ul>
 					<li><a class="anchor-link" href="#s-about">A empresa</a></li>
 					<li><a class="anchor-link" href="#s-services">Serviços</a></li>
@@ -206,14 +211,14 @@
 			</a> -->
 
 			<div class="header-mobile-social">
-				<a href="https://www.instagram.com/engeplena/" target="_blank" rel="noopener">
-					<img src="images/social-facebook.svg" alt="Instagram">
+            	<a href="https://www.instagram.com/engeplena/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+					<img src="images/social-facebook.svg" alt="" aria-hidden="true">
 				</a>
-				<a href="https://www.facebook.com/engeplena" target="_blank" rel="noopener">
-					<img src="images/social-facebook.svg" alt="Facebook">
+				<a href="https://www.facebook.com/engeplena" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+					<img src="images/social-facebook.svg" alt="" aria-hidden="true">
 				</a>
-				<a href="mailto:contato@engeplena.com.br">
-					<img src="images/social-facebook.svg" alt="Email">
+				<a href="mailto:contato@engeplena.com.br" aria-label="Email">
+					<span class="material-symbols-outlined" style="color: white;">mail</span>
 				</a>
 			</div>
 		</div>
