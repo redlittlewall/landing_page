@@ -164,11 +164,12 @@ textarea::placeholder {
 
 .def-btn {
 	background-color: var(--principalGreen);
+	border-radius:30px;
 	padding: 15px 45px;
 	display: inline-block;
 	transition: background-color 0.35s ease;
 	font-size: 16px;
-	color: var(--white);;
+	color: var(--white);
 }
 
 .def-btn:hover {
@@ -350,10 +351,9 @@ textarea::placeholder {
 	padding: 175px 0;
 	color: var(--white);;
 	text-align: center;
-	background-position: center top;
-	background-size: cover;
-	background-repeat: no-repeat;
 	min-height: 640px;
+	position: relative; 
+    overflow: hidden;
 }
 
 .banner-swiper .swiper-slide::before {
@@ -368,9 +368,22 @@ textarea::placeholder {
 	z-index: -1;
 }
 
+.slide-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center top;
+    z-index: -2; 
+}
+
 .banner-content {
-	max-width: 750px;
-	margin: 0 auto;
+	position: relative;
+    z-index: 1;
+    max-width: 750px;
+    margin: 0 auto;
 }
 
 .banner-subtitle {
@@ -386,86 +399,98 @@ textarea::placeholder {
 	line-height: 1.3;
 }
 
-.swiper-button-next {
-	right: 40px;
-	transform: translateX(110px);
-}
-
-.swiper-button-prev {
-	left: 40px;
-	transform: translateX(-110px);
-}
-
 .swiper-button-next,
 .swiper-button-prev {
-	color: var(--white);;
-	background-color: var(--mediumGreen);
-	width: 60px;
-	height: 60px;
-	transition: transform 0.3s ease;
-	overflow: hidden;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.swiper-button-prev {
+    left: 40px;
+    transform: translateX(-110px); 
+}
+
+.swiper-button-next {
+    right: 40px;
+    transform: translateX(110px); 
 }
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
-	font-size: 28px;
+    content: none;
 }
 
-.swiper-button-next:hover::before,
-.swiper-button-prev:hover::before {
-	transform: none;
+.swiper-button-next img,
+.swiper-button-prev img {
+    width: 30px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.swiper-button-next::before {
-	content: '';
-	display: block;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	background-color: var(--darkGreen);
-	transform: translateX(calc(-100% - 10px));
-	transition: transform 0.35s ease;
-	z-index: -1;
+.swiper-button-prev:hover img,
+.swiper-button-next:hover img {    
+    /* Filtro para calcular o SVG para #48887B */
+    filter: brightness(0) saturate(100%) invert(51%) sepia(9%) saturate(1834%) hue-rotate(122deg) brightness(95%) contrast(89%);
+    transform: scale(1.2); 
 }
 
-.swiper-button-prev::before {
-	content: '';
-	display: block;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	background-color: var(--darkGreen);
-	transform: translateX(calc(100% + 10px));
-	transition: transform 0.35s ease;
-	z-index: -1;
+.swiper-button-prev:hover img {
+    transform: translateX(-3px) scale(1.2);
 }
-
-.swiper-horizontal>.swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
-	bottom: 30px;
+.swiper-button-next:hover img {
+    transform: translateX(3px) scale(1.2);
 }
 
 .swiper-pagination-bullet {
-	width: 14px;
-	height: 14px;
+	width: 15px;
+	height: 15px;
 	border-radius: 0;
-	background-color: var(--lightGreen);
+	border: 1px solid var(--lightGreen);
 	opacity: 1;
+
+	cursor: pointer;
+	-webkit-user-select: none; /* Safari / Chrome Mobile */
+	-moz-user-select: none;    /* Firefox */
+	-ms-user-select: none;     /* IE/Edge */
+	user-select: none;         /* Padrão */
+	-webkit-tap-highlight-color: transparent;
+	outline: none;
+
+	transform: rotate(45deg);
+	background: linear-gradient(135deg, var(--lightGreen) 55%, transparent 45%);
+	transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
 }
 
 .swiper-pagination-bullet-active {
-	background-color: var(--principalGreen);
+    background: linear-gradient(135deg, var(--principalGreen) 55%, transparent 45%);
+	border-color: var(--principalGreen);     
+    transform: rotate(45deg) scale(1.2);
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-	margin: 10px
+    margin: 0 12px; 
+}
+
+/* Posição do container (Mantido) */
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 30px;
 }
 
 /* Banner END */

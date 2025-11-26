@@ -177,48 +177,63 @@
 
 
 	<section class="s-banner">
-
 		<div class="swiper banner-swiper">
-
 			<div class="swiper-wrapper">
-				<div class="swiper-slide" style="background-image: url(images/banner-bg-1.jpg)">
-					<div class="banner-content">
-						<div class="banner-subtitle wow fadeIn">Fundada em 2006</div>
-						<h1 class="banner-title">
-							<strong>Engeplena Engenharia:</strong> Projetos, Obras e Consultoria em <strong>Itabirito e
-								Região.</strong>
-						</h1>
-						<a href="#s-services" class="banner-btn def-btn anchor-link wow fadeIn"
-							data-wow-delay="0.3s">Conheça nossos serviços</a>
-					</div>
-				</div>
-				<div class="swiper-slide" style="background-image: url(images/banner-bg-2.jpg)">
-					<div class="banner-content">
-						<div class="banner-subtitle wow fadeIn">Excelência Técnica</div>
-						<h2 class="banner-title">Soluções completas em <strong>Projetos Estruturais, Elétricos e
-								Hidrossanitários</strong> para sua obra.</h2>
-						<a href="#s-gallery" class="banner-btn def-btn anchor-link">Conheça nossos projetos</a>
-					</div>
-				</div>
-				<div class="swiper-slide" style="background-image: url(images/banner-bg-3.jpg)">
-					<div class="banner-content">
-						<div class="banner-subtitle">Responsabilidade e Segurança</div>
-						<h2 class="banner-title"><strong>Consultoria Ambiental</strong> e Projetos de <strong>Combate a
-								Incêndio</strong> com aprovação garantida.</h2>
-						<a href="#s-contact" class="banner-btn def-btn anchor-link">Fale com um especialista</a>
-					</div>
-				</div>
+				<div class="swiper-slide">
+                    <img src="images/banner-bg-1.jpg" 
+                         alt="Engenheiro civil realizando medição em obra com teodolito ao pôr do sol" 
+                         class="slide-bg"
+                         fetchpriority="high"
+                         loading="eager">
+                         
+                    <div class="banner-content">
+                        <div class="banner-subtitle wow fadeIn">Fundada em 2006</div>
+                        <h1 class="banner-title">
+                            <strong>Engeplena Engenharia:</strong> Projetos, Obras e Consultoria em <strong>Itabirito e Região.</strong>
+                        </h1>
+                        <a href="#s-services" class="banner-btn def-btn anchor-link wow fadeIn" data-wow-delay="0.3s">Conheça nossos serviços</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/banner-bg-2.jpg" 
+                         alt="Ferramentas de construção civil e capacete de segurança em obra" 
+                         class="slide-bg"
+                         loading="lazy">
+
+                    <div class="banner-content">
+                        <div class="banner-subtitle wow fadeIn">Excelência Técnica</div>
+                        <h2 class="banner-title">Soluções completas em <strong>Projetos Estruturais, Elétricos e Hidrossanitários</strong> para sua obra.</h2>
+                        <a href="#s-gallery" class="banner-btn def-btn anchor-link">Conheça nossos projetos</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/banner-bg-3.jpg" 
+                         alt="Engenheiro segurando plantas de projeto com estrutura metálica ao fundo" 
+                         class="slide-bg"
+                         loading="lazy">
+
+                    <div class="banner-content">
+                        <div class="banner-subtitle">Responsabilidade e Segurança</div>
+                        <h2 class="banner-title"><strong>Consultoria Ambiental</strong> e Projetos de <strong>Combate a Incêndio</strong> com aprovação garantida.</h2>
+                        <a href="#s-contact" class="banner-btn def-btn anchor-link">Fale com um especialista</a>
+                    </div>
+                </div>
 			</div>
 
 			<div class="swiper-pagination wow fadeInUp" data-wow-delay="0.5s"></div>
 
 			<div class="container">
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
+				<button class="swiper-button-prev" type="button" aria-label="Slide anterior">
+                    <img src="images/Arrow L.svg" alt="" aria-hidden="true">
+                </button>
+                
+                <button class="swiper-button-next" type="button" aria-label="Próximo slide">
+                    <img src="images/Arrow R.svg" alt="" aria-hidden="true">
+                </button>
 			</div>
-
 		</div>
-
 	</section>
 
 	<section class="s-about" id="s-about">
