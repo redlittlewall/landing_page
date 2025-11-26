@@ -18,15 +18,18 @@ document.addEventListener('DOMContentLoaded', () => {
 	function scrollHeader() {
 		// Cache dos seletores para performance
 		const $window = $(window);
-		const $headerBottom = $('.header-bottom');
+		const $headerMenu = $('.header-menu');
+		const $headerMobile = $('.header-mobile');
 		const $socialSidebar = $('.social-sidebar');
-		const headerTopHeight = $('.header-top').outerHeight(); 
+		const headerTopHeight = $('.header-menu').outerHeight(); 
 
 		if ($window.scrollTop() > headerTopHeight) {
-			$headerBottom.addClass('is-fixed');
+			$headerMenu.addClass('is-opaque');
+			$headerMobile.addClass('is-opaque');
 			$socialSidebar.addClass('is-visible');
 		} else {
-			$headerBottom.removeClass('is-fixed');
+			$headerMenu.removeClass('is-opaque');
+			$headerMobile.removeClass('is-opaque');
 			$socialSidebar.removeClass('is-visible');
 		}
 	}

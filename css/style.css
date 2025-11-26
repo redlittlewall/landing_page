@@ -176,64 +176,46 @@ textarea::placeholder {
 }
 
 /* Header START */
-.header-top {
-	background-color: var(--bgDarkGreen);
-	color: var(--white);;
-	padding: 18px 0 55px 0;
-	font-size: 14px;
+.header-mobile {
+	display:none;
 }
 
-.header-row {
-	display: flex;
-	align-items: center;
+
+.header-menu {
+	position: fixed;
+    top: 0;
+    left: 0;              /* Cola na esquerda */
+    width: 100%;          /* Ocupa toda a largura */
+    max-width: 100%;      /* Remove o limite de 1200px */
+    transform: none;      /* Remove a centralização antiga */
+    border-radius: 0;     /* Remove bordas arredondadas se houver */
+    background-color: transparent;
+    /* box-shadow: 0px 4px 10px var(--shadowBlack);  */
+    transition: all 0.35s ease; /* Animação suave na transição */
+    z-index: 999;
 }
 
-.header-right {
-	display: flex;
-	column-gap: 74px;
-	margin-left: auto;
+/* Ajuste interno para o container continuar centralizado */
+.header-menu .container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.header-info {
-	display: flex;
-	align-items: center;
+/* Removemos a cor da linha interna para não conflitar com o fundo total */
+.header-menu .header-menu-row {
+    background-color: transparent; 
+    box-shadow: none;
 }
 
-.header-info img {
-	margin-right: 16px;
-	max-width: 21px;
-}
-.header-info .material-symbols-outlined {
-    margin-right: 8px;
-    color: var(--lightGreen); 
-}
-
-.header-social {
-	display: flex;
-	align-items: center;
-	column-gap: 28px;
-}
-
-.header-social a {
-	transition: opacity 0.35s ease;
-}
-
-.header-social a:hover {
-	opacity: 0.5;
-}
-
-.header-bottom {
-	position: absolute;
-	z-index: 2;
-	top: 60px;
-	left: 50%;
-	transform: translateX(-50%);
-	max-width: 1200px;
-	width: 100%;
+.header-menu.is-opaque,
+.header-mobile.is-opaque{
+	box-shadow: 0px 4px 10px var(--shadowBlack);
 	transition: all 0.35s ease;
+	background-color: var(--principalGreen);
 }
 
-.header-bottom-row {
+
+.header-menu-row {
 	display: flex;
 	background-color: var(--principalGreen);
 	color: var(--white);;
@@ -242,7 +224,7 @@ textarea::placeholder {
 
 .header-logo {
 	background-color: var(--white);;
-	padding: 15px 60px 15px 40px;
+	padding: 5px 60px 5px 40px;
 	display: flex;
 	align-items: center;
 	clip-path: polygon(0px 0px, 100% 0%, 82.68% 101.20%, 0px 100%);
@@ -276,49 +258,8 @@ textarea::placeholder {
 	color: var(--lightGreen);
 }
 
-/* .header-bottom.is-fixed {
-	position: fixed;
-	top: 0;
-	transition: 0.35s ease;
-}
-
-.header-bottom.is-fixed .header-logo {
-	padding: 0 50px 5px 40px;
-}
-
-.header-bottom.is-fixed .header-nav {
-	padding: 0 60px;
-}
-
-.header-bottom.is-fixed .header-logo img {
-	max-width: 140px;
-} */
-.header-bottom.is-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;              /* Cola na esquerda */
-    width: 100%;          /* Ocupa toda a largura */
-    max-width: 100%;      /* Remove o limite de 1200px */
-    transform: none;      /* Remove a centralização antiga */
-    border-radius: 0;     /* Remove bordas arredondadas se houver */
-    background-color: var(--principalGreen); /* Garante o fundo verde em toda a barra */
-    box-shadow: 0px 4px 10px var(--shadowBlack); /* Sombra mais suave */
-    transition: all 0.35s ease; /* Animação suave na transição */
-    z-index: 999;
-}
 
 
-/* Ajuste interno para o container continuar centralizado */
-.header-bottom.is-fixed .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Removemos a cor da linha interna para não conflitar com o fundo total */
-.header-bottom.is-fixed .header-bottom-row {
-    background-color: transparent; 
-    box-shadow: none;
-}
 
 .social-sidebar {
     position: fixed;
@@ -1433,7 +1374,7 @@ textarea::placeholder {
 
 	/* Header 1200 START */
 	.header-logo {
-		padding: 15px 50px 15px 20px;
+		padding: 5px 50px 5px 20px;
 	}
 
 	.header-nav {
@@ -1465,34 +1406,10 @@ textarea::placeholder {
 @media screen and (max-width: 992px) {
 
 	/* Header 992 START */
-	.header-logo {
-		padding: 10px 30px 10px 20px;
-	}
 
 	.header-logo img {
-		max-width: 130px;
-	}
-
-	.header-top {
-		font-size: 12px;
-	}
-
-	.header-right {
-		column-gap: 30px;
-	}
-
-	.header-info img {
-		margin-right: 5px;
-		max-width: 18px;
-	}
-
-	.header-social {
-		column-gap: 15px;
-	}
-
-	.header-social a img {
-		max-width: 18px;
-	}
+		max-width: 200px;
+	} 
 
 	.header-nav ul {
 		font-size: 14px;
@@ -1752,9 +1669,7 @@ textarea::placeholder {
 
 @media screen and (max-width: 768px) {
 
-	body{
-		padding-top:60px /*Adiciona espaçamento para header*/
-	}
+
 
 	/* All styles 768 START */
 	.def-title {
@@ -1780,9 +1695,10 @@ textarea::placeholder {
 	/* All styles 768 END */
 
 	/* Header 768 START */
-	.header-top {
+	.header-mobile {
 		/* padding: 0; */
 		/* border-bottom: 1px solid var(--textLightGray); */
+		display: block;
 		position: fixed; /* Cola no topo */
 		top: 0;
 		left: 0;
@@ -1790,12 +1706,16 @@ textarea::placeholder {
 		z-index: 1000; /* Garante que fique acima de tudo */
 		padding: 0;
 		/* border-bottom: 1px solid var(--textLightGray); */
-		/* background-color: var(--bgDarkGreen); */
+		background-color: transparent;
+		transition: all 0.5s ease;
 	}
 
-	.header-desc,
-	.header-right,
-	.header-bottom {
+	.header-row {
+		display: flex;
+		align-items: center;
+	}
+
+	.header-menu {
 		display: none;
 	}
 
@@ -1866,9 +1786,9 @@ textarea::placeholder {
 		top: 50%;
 		transform: translateY(-4px) rotate(-45deg);
 	}
-	.header-top{
+	/* .header-mobile{
 		background-color: var(--principalGreen);
-	}
+	} */
 
 	.header-mobile-wrap {
 		position: fixed;
