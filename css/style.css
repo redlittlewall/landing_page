@@ -220,6 +220,7 @@ textarea::placeholder {
 	transform: translateX(-50%);
 	max-width: 1200px;
 	width: 100%;
+	transition: all 0.35s ease;
 }
 
 .header-bottom-row {
@@ -1741,6 +1742,10 @@ textarea::placeholder {
 
 @media screen and (max-width: 768px) {
 
+	body{
+		padding-top:60px /*Adiciona espaçamento para header*/
+	}
+
 	/* All styles 768 START */
 	.def-title {
 		font-size: 32px;
@@ -1766,8 +1771,16 @@ textarea::placeholder {
 
 	/* Header 768 START */
 	.header-top {
+		/* padding: 0; */
+		/* border-bottom: 1px solid var(--textLightGray); */
+		position: fixed; /* Cola no topo */
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 1000; /* Garante que fique acima de tudo */
 		padding: 0;
-		border-bottom: 1px solid var(--textLightGray);
+		/* border-bottom: 1px solid var(--textLightGray); */
+		/* background-color: var(--bgDarkGreen); */
 	}
 
 	.header-desc,
@@ -1792,18 +1805,34 @@ textarea::placeholder {
 	.hamburger {
 		margin-left: auto;
 		cursor: pointer;
-		width: 26px;
-		height: 11px;
+		width: 46px; 
+		height: 40px;
+		padding: 10px;
+		margin-right: -10px; 
+
+		display: flex; 
+		flex-direction: column;
+		justify-content: center;
+		gap: 6px; 
 		position: relative;
+		
+		-webkit-user-select: none; /* Safari / Chrome Mobile */
+		-moz-user-select: none;    /* Firefox */
+		-ms-user-select: none;     /* IE/Edge */
+		user-select: none;         /* Padrão */
+
+		/* 2. Remove o quadrado de cor que pisca ao tocar (Android/iOS) */
+		-webkit-tap-highlight-color: transparent;
+		outline: none;
 	}
 
 	.hamburger span {
-		height: 1px;
-		width: 26px;
+		height: 2px;
+		width: 100%;
 		background-color: var(--white);;
 		display: block;
-		transition: 0.5s ease;
-		position: absolute;
+		transition: 0.3s ease;
+		position: static;
 	}
 
 	.hamburger span:first-child {
@@ -1814,29 +1843,34 @@ textarea::placeholder {
 		bottom: 0;
 	}
 
-	.hamburger.is-active {}
+	/* .hamburger.is-active {} */
 
 	.hamburger.is-active span:first-child {
 		top: 50%;
-		transform: translateY(-50%) rotate(45deg);
+		transform: translateY(4px) rotate(45deg);
 	}
 
 	.hamburger.is-active span:last-child {
 		top: 50%;
-		transform: translateY(-50%) rotate(-45deg);
+		transform: translateY(-4px) rotate(-45deg);
+	}
+	.header-top{
+		background-color: var(--principalGreen);
 	}
 
 	.header-mobile-wrap {
-		background-color: var(--bgDarkGreen);
+		position: fixed;
+		background-color: var(--principalGreen);
 		color: var(--white);;
 		padding: 30px 20px;
 		text-align: center;
-		position: absolute;
 		top: 60px;
 		left: 0;
 		width: 100%;
-		z-index: 12;
+		z-index: 999;
 		display: none;
+		max-height: calc(100vh - 55px);
+    	overflow-y: auto;
 	}
 
 	.header-mobile-nav {

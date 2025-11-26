@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				animateCounter(this, targetValue, duration);
 			});
 
-			jQuery(window).off('scroll');
+			jQuery(window).off('scroll.counter');
 		}
 	});
 
