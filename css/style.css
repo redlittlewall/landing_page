@@ -1,3 +1,6 @@
+/* Importação Google Fonts (Poppins + Roboto) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700&display=swap');
+
 :root {
     /* Paleta de Cores */
     --lightGreen: #AACBC4;
@@ -5,6 +8,27 @@
     --principalGreen: #48887B; /* Cor Principal */
     --darkGreen: #2D3F2F;      /* Hover / Detalhes Escuros */
     --bgDarkGreen: #1D2820;    /* Backgrounds / Footer */
+
+	/* --- Neutros--- */
+    --white: #ffffff;
+    --black: #000000;
+    --bgLightGray: #F9F9F9;     /* Fundos alternados de seção */
+    --bgInput: #F6F6F6;         /* Fundo de inputs */
+    --textGray: #6D6A6A;        /* Texto padrão de parágrafos */
+    --textLightGray: #999696;   /* Legendas, datas, textos menores */
+    --borderGray: #D5D5D5;      /* Bordas divisórias */
+	--textOffWhite: #E0E0E0;        /* Texto claro para fundos escuros */
+
+	/* --- Sombras e Overlays --- */
+    --borderWhiteOp: rgba(255, 255, 255, 0.24); /* Bordas sutis em fundos escuros */
+	--shadowBlack: rgba(0, 0, 0, 0.15);       /* Sombra padrão escura */
+    --shadowWarm: var(--shadowWarm);     /* Sombra "quente" para cards (Team/Reviews) */
+    --overlayBanner: rgba(35, 31, 31, 0.80);  /* Escurecimento do banner */
+    --overlayHover: rgba(68, 62, 62, 0.72); /* Efeito de hover na galeria */
+
+	/* --- Tipografia --- */
+    --fontText: 'Roboto', sans-serif;   /* Textos Corridos */
+    --fontTitle: 'Poppins', sans-serif; /* Títulos e Botões */
 }
 
 * {
@@ -17,7 +41,7 @@ body {
 }
 
 body {
-	font-family: 'Montserrat';
+	font-family: var(--fontText);
 	font-size: 16px;
 	line-height: 1.6;
 	min-width: 320px;
@@ -34,6 +58,7 @@ h5,
 h6 {
 	margin-top: 0;
 	margin-bottom: 20px;
+	font-family: var(--fontTitle);
 }
 
 strong {
@@ -53,13 +78,29 @@ a {
 
 input,
 textarea {
-	background-color: #F6F6F6;
-	font-family: 'Montserrat';
+	background-color: var(--bgInput);;
+	font-family: var(--fontText);
 }
 
 input::placeholder,
 textarea::placeholder {
-	color: #9F9F9F;
+	color: var(--textLightGray);
+}
+
+.def-title,
+.center-title,
+.banner-title,
+.services-title,
+.why-features-title,
+.team-name,
+.reviews-name,
+.footer-title,
+.modal-form-title,
+.def-btn,        /* Botões Padrão */
+.form-button,    /* Botão do Formulário */
+.header-nav ul   /* Menu de Navegação (geralmente segue a fonte de títulos/botões) */
+{
+    font-family: var(--fontTitle);
 }
 
 .def-title {
@@ -77,13 +118,13 @@ textarea::placeholder {
 	position: absolute;
 	top: 30px;
 	left: calc(-100% - 25px);
-	background-color: #48887B;
+	background-color: var(--principalGreen);
 }
 
 .center-title {
 	font-size: 42px;
 	font-weight: 700;
-	color: #000;
+	color: var(--black);
 	text-align: center;
 	margin-bottom: 40px;
 }
@@ -92,46 +133,46 @@ textarea::placeholder {
 	content: '';
 	height: 1px;
 	width: 70px;
-	background-color: #48887B;
+	background-color: var(--principalGreen);
 	display: block;
 	margin: 15px auto 0 auto;
 }
 
 .color-white {
-	color: #fff;
+	color: var(--white);;
 }
 
 .center-title.color-white::after {
-	background-color: #fff;
+	background-color: var(--white);;
 }
 
 .def-desc {
-	color: #6D6A6A;
+	color: var(--textGray);;
 	font-size: 14px;
 	line-height: 1.9;
 }
 
 .def-desc strong {
-	color: #000;
+	color: var(--black);
 }
 
 .def-btn {
-	background-color: #48887B;
+	background-color: var(--principalGreen);
 	padding: 15px 45px;
 	display: inline-block;
 	transition: background-color 0.35s ease;
 	font-size: 16px;
-	color: #fff;
+	color: var(--white);;
 }
 
 .def-btn:hover {
-	background-color: #2D3F2F;
+	background-color: var(--darkGreen);
 }
 
 /* Header START */
 .header-top {
-	background-color: #1D2820;
-	color: #fff;
+	background-color: var(--bgDarkGreen);
+	color: var(--white);;
 	padding: 18px 0 55px 0;
 	font-size: 14px;
 }
@@ -183,13 +224,13 @@ textarea::placeholder {
 
 .header-bottom-row {
 	display: flex;
-	background-color: #48887B;
-	color: #fff;
-	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.11);
+	background-color: var(--principalGreen);
+	color: var(--white);;
+	box-shadow: 0px 4px 4px 0px var(--shadowBlack);
 }
 
 .header-logo {
-	background-color: #fff;
+	background-color: var(--white);;
 	padding: 15px 60px 15px 40px;
 	display: flex;
 	align-items: center;
@@ -221,7 +262,7 @@ textarea::placeholder {
 }
 
 .header-nav ul li a:hover {
-	color: #ccc9c9;
+	color: var(--lightGreen);
 }
 
 /* .header-bottom.is-fixed {
@@ -249,8 +290,8 @@ textarea::placeholder {
     max-width: 100%;      /* Remove o limite de 1200px */
     transform: none;      /* Remove a centralização antiga */
     border-radius: 0;     /* Remove bordas arredondadas se houver */
-    background-color: #48887B; /* Garante o fundo verde em toda a barra */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Sombra mais suave */
+    background-color: var(--principalGreen); /* Garante o fundo verde em toda a barra */
+    box-shadow: 0px 4px 10px var(--shadowBlack); /* Sombra mais suave */
     transition: all 0.35s ease; /* Animação suave na transição */
     z-index: 999;
 }
@@ -294,14 +335,14 @@ textarea::placeholder {
     justify-content: center;
     width: 45px;
     height: 45px;
-    background-color: #48887B; /* Verde da marca */
+    background-color: var(--principalGreen); /* Verde da marca */
     border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px var(--shadowBlack);
     transition: transform 0.3s ease, background-color 0.3s;
 }
 
 .social-sidebar a:hover {
-    background-color: #2D3F2F; /* Verde mais escuro no hover */
+    background-color: var(--darkGreen); /* Verde mais escuro no hover */
     transform: scale(1.1);
 }
 
@@ -330,7 +371,7 @@ textarea::placeholder {
 }
 
 .go-up a {
-	background-color: #48887B;
+	background-color: var(--principalGreen);
 	width: 60px;
 	height: 60px;
 	display: flex;
@@ -354,7 +395,7 @@ textarea::placeholder {
 
 .banner-swiper .swiper-slide {
 	padding: 175px 0;
-	color: #fff;
+	color: var(--white);;
 	text-align: center;
 	background-position: center top;
 	background-size: cover;
@@ -370,7 +411,7 @@ textarea::placeholder {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(35, 31, 31, 0.80);
+	background-color:var(--overlayBanner);
 	z-index: -1;
 }
 
@@ -380,6 +421,7 @@ textarea::placeholder {
 }
 
 .banner-subtitle {
+	color: var(--lightGreen);
 	font-size: 16px;
 	text-transform: uppercase;
 	margin-bottom: 10px;
@@ -403,8 +445,8 @@ textarea::placeholder {
 
 .swiper-button-next,
 .swiper-button-prev {
-	color: #fff;
-	background-color: #5A5454;
+	color: var(--white);;
+	background-color: var(--mediumGreen);
 	width: 60px;
 	height: 60px;
 	transition: transform 0.3s ease;
@@ -429,7 +471,7 @@ textarea::placeholder {
 	height: 100%;
 	left: 0;
 	top: 0;
-	background-color: #312f2f;
+	background-color: var(--darkGreen);
 	transform: translateX(calc(-100% - 10px));
 	transition: transform 0.35s ease;
 	z-index: -1;
@@ -443,7 +485,7 @@ textarea::placeholder {
 	height: 100%;
 	left: 0;
 	top: 0;
-	background-color: #312f2f;
+	background-color: var(--darkGreen);
 	transform: translateX(calc(100% + 10px));
 	transition: transform 0.35s ease;
 	z-index: -1;
@@ -460,12 +502,12 @@ textarea::placeholder {
 	width: 14px;
 	height: 14px;
 	border-radius: 0;
-	background-color: #D9D9D9;
+	background-color: var(--lightGreen);
 	opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
-	background-color: #48887B;
+	background-color: var(--principalGreen);
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
@@ -509,13 +551,13 @@ textarea::placeholder {
 
 /* Numbers START */
 .s-numbers {
-	background-color: #1D2820;
-	color: #fff;
+	background-color: var(--bgDarkGreen);
+	color: var(--white);;
 	padding: 72px 0;
 }
 
 .s-numbers .def-title::before {
-	background-color: #fff;
+	background-color: var(--white);;
 }
 
 .numbers-row {
@@ -525,7 +567,7 @@ textarea::placeholder {
 .numbers-left {
 	width: 40%;
 	padding-right: 100px;
-	border-right: 1px solid #D5D5D5;
+	border-right: 1px solid var(--borderGray);;
 }
 
 .numbers-right {
@@ -562,7 +604,7 @@ textarea::placeholder {
 }
 
 .services-item {
-	box-shadow: 0px 1px 12px 1px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 1px 12px 1px var(--shadowBlack);
 	width: 33.3%;
 	height: 100%;
 }
@@ -585,7 +627,7 @@ textarea::placeholder {
 
 .services-desc {
 	margin-bottom: 15px;
-	color: #999696;
+	color: var(--textLightGray);
 }
 
 .services-btn {
@@ -595,7 +637,7 @@ textarea::placeholder {
 }
 
 .modal-form {
-	background-color: #fff;
+	background-color: var(--white);;
 	max-width: 455px;
 	margin: 0 auto;
 	padding: 20px 45px 50px 45px;
@@ -605,7 +647,7 @@ textarea::placeholder {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 1px solid #D5D2D2;
+	border-bottom: 1px solid var(--borderGray);
 	margin-bottom: 30px;
 	padding-bottom: 18px;
 }
@@ -630,15 +672,14 @@ textarea::placeholder {
 	display: block;
 	height: 1px;
 	width: 70px;
-	background-color: #48887B;
+	background-color: var(--principalGreen);
 	margin: 20px auto 0 auto;
 }
 
 .modal-form input {
 	display: block;
 	padding: 22px 25px;
-	background-color: #F6F6F6;
-	font-family: 'Montserrat';
+	background-color: var(--bgInput);;
 	font-size: 16px;
 	border: none;
 	width: 100%;
@@ -647,8 +688,8 @@ textarea::placeholder {
 }
 
 .modal-form .form-button {
-	background-color: #48887B;
-	color: #fff;
+	background-color: var(--principalGreen);
+	color: var(--white);;
 	max-width: 285px;
 	width: 100%;
 	margin: 0 auto;
@@ -656,13 +697,12 @@ textarea::placeholder {
 	padding: 20px 25px;
 	border: none;
 	cursor: pointer;
-	font-family: 'Montserrat';
 	font-size: 16px;
 	transition: background-color 0.35s ease;
 }
 
 .modal-form .form-button:hover {
-	background-color: #2D3F2F;
+	background-color: var(--darkGreen);
 }
 
 
@@ -917,7 +957,7 @@ textarea::placeholder {
 /* Gallery START */
 .s-gallery {
 	padding: 100px 0;
-	background-color: #F9F9F9;
+	background-color: var(--bgLightGray);;
 }
 
 .gallery-wrap {
@@ -954,14 +994,14 @@ textarea::placeholder {
 
 .gallery-wrap a::before {
 	content: 'Zoom';
-	background-color: rgba(68, 62, 62, 0.72);
+	background-color: var(--overlayHover);
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: #fff;
+	color: var(--white);;
 	font-size: 22px;
 	padding-top: 50px;
 	margin-top: -20px;
@@ -988,7 +1028,7 @@ textarea::placeholder {
 }
 
 .gallery-border {
-	border: 1px solid #fff;
+	border: 1px solid var(--white);;
 	width: calc(100% - 35px);
 	height: calc(100% - 35px);
 	position: absolute;
@@ -1043,7 +1083,7 @@ textarea::placeholder {
 }
 
 .why-features-desc {
-	color: #6D6A6A;
+	color: var(--textGray);;
 }
 
 .why-right {
@@ -1061,7 +1101,7 @@ textarea::placeholder {
 /* Team START */
 .s-team {
 	padding: 100px 0;
-	background-color: #F9F9F9;
+	background-color: var(--bgLightGray);;
 }
 
 .team-row {
@@ -1070,9 +1110,9 @@ textarea::placeholder {
 }
 
 .team-item {
-	box-shadow: 0px 4px 4px 0px rgba(95, 87, 87, 0.12);
+	box-shadow: 0px 4px 4px 0px var(--shadowWarm);
 	height: 100%;
-	background-color: #fff;
+	background-color: var(--white);;
 }
 
 .team-thumb img {
@@ -1081,13 +1121,13 @@ textarea::placeholder {
 }
 
 .team-body {
-	background-color: #fff;
+	background-color: var(--white);;
 	padding: 20px 30px;
 }
 
 .team-profi {
 	text-transform: uppercase;
-	color: #C2C1C1;
+	color: var(--mediumGreen);
 	margin-bottom: 5px;
 }
 
@@ -1111,8 +1151,8 @@ textarea::placeholder {
 }
 
 .reviews-item {
-	background-color: #fff;
-	box-shadow: 0px 4px 4px 0px rgba(95, 87, 87, 0.12);
+	background-color: var(--white);;
+	box-shadow: 0px 4px 4px 0px var(--shadowWarm);
 }
 
 .reviews-thumb img {
@@ -1133,17 +1173,17 @@ textarea::placeholder {
 
 .reviews-profi {
 	font-weight: 500;
-	color: #979494;
+	color: var(--mediumGreen);
 	margin-bottom: 15px;
 }
 
 .reviews-comment {
-	color: #8A8787;
+	color: var(--textGray);
 	margin-bottom: 20px;
 }
 
 .reviews-social {
-	border-top: 1px solid #C5B8B8;
+	border-top: 1px solid var(--borderGray);
 	padding-top: 20px;
 	display: flex;
 	align-items: center;
@@ -1205,7 +1245,7 @@ textarea::placeholder {
 /* Form START */
 .s-form {
 	padding: 80px 0;
-	background-color: #F9F9F9;
+	background-color: var(--bgLightGray);;
 }
 
 .form-row {
@@ -1232,17 +1272,17 @@ textarea::placeholder {
 }
 
 .form-right form {
-	background-color: #fff;
+	background-color: var(--white);;
 	padding: 60px 45px;
 	position: relative;
-	box-shadow: 0px -1px 8px 4px rgba(88, 83, 83, 0.12);
+	box-shadow: 0px -1px 8px 4px var(--shadowWarm);
 }
 
 .form-right form::before {
 	content: '';
 	width: 100%;
 	height: 10px;
-	background-color: #48887B;
+	background-color: var(--principalGreen);
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -1252,11 +1292,10 @@ textarea::placeholder {
 .form-right form input,
 .form-right form textarea {
 	font-size: 14px;
-	font-family: 'Montserrat';
 	display: block;
 	width: 100%;
 	padding: 22px 30px;
-	background-color: #F6F6F6;
+	background-color: var(--bgInput);;
 	border: none;
 	outline: none;
 	margin-bottom: 24px;
@@ -1270,13 +1309,22 @@ textarea::placeholder {
 	padding: 15px 65px;
 }
 
+.form-right form input:focus,
+.form-right form textarea:focus,
+.modal-form input:focus {
+    border: 1px solid var(--mediumGreen); /* Adiciona borda colorida */
+    background-color: var(--white);       /* Clareia o fundo */
+    box-shadow: 0 0 0 3px var(--lightGreen); /* Adiciona um "brilho" sutil externo */
+    transition: all 0.3s ease;
+}
+
 /* Form END */
 
 
 /* Footer START */
 .site-footer {
-	background-color: #1D2820;
-	color: #fff;
+	background-color: var(--bgDarkGreen);
+	color: var(--white);;
 	font-size: 14px;
 }
 
@@ -1287,7 +1335,7 @@ textarea::placeholder {
 .footer-left {
 	max-width: 268px;
 	padding: 60px 60px 60px 0;
-	border-right: 1px solid rgba(239, 239, 239, 0.24);
+	border-right: 1px solid var(--borderWhiteOp);
 }
 
 .footer-logo {
@@ -1302,7 +1350,7 @@ textarea::placeholder {
 }
 
 .footer-desc {
-	color: #D2D2D2;
+	color: var(--textOffWhite);
 	line-height: 1.7;
 }
 
@@ -1315,7 +1363,7 @@ textarea::placeholder {
 	list-style-type: none;
 	padding: 0;
 	font-size: 14px;
-	color: #E0E0E0;
+	color: var(--textOffWhite);
 }
 
 .footer-nav ul li:nth-last-child(n+2) {
@@ -1323,7 +1371,7 @@ textarea::placeholder {
 }
 
 .footer-nav ul li a:hover {
-	color: #fff;
+	color: var(--white);;
 }
 
 .footer-info-item {
@@ -1359,10 +1407,10 @@ textarea::placeholder {
 }
 
 .footer-copyright {
-	border-top: 1px solid rgba(239, 239, 239, 0.24);
+	border-top: 1px solid var(--borderWhiteOp);
 	padding: 24px 0 30px 0;
 	text-align: center;
-	color: #D2D2D2;
+	color: var(--textOffWhite);
 }
 
 /* Footer END */
@@ -1523,7 +1571,7 @@ textarea::placeholder {
 		padding-bottom: 22px;
 		margin-bottom: 30px;
 		border-right: none;
-		border-bottom: 1px solid #D5D5D5;
+		border-bottom: 1px solid var(--borderGray);;
 		width: auto;
 	}
 
@@ -1719,7 +1767,7 @@ textarea::placeholder {
 	/* Header 768 START */
 	.header-top {
 		padding: 0;
-		border-bottom: 1px solid #9F9F9F;
+		border-bottom: 1px solid var(--textLightGray);
 	}
 
 	.header-desc,
@@ -1729,7 +1777,7 @@ textarea::placeholder {
 	}
 
 	.header-mobile-logo {
-		background-color: #fff;
+		background-color: var(--white);;
 		padding: 8px 40px 8px 20px;
 		display: flex;
 		align-items: center;
@@ -1752,7 +1800,7 @@ textarea::placeholder {
 	.hamburger span {
 		height: 1px;
 		width: 26px;
-		background-color: #fff;
+		background-color: var(--white);;
 		display: block;
 		transition: 0.5s ease;
 		position: absolute;
@@ -1779,8 +1827,8 @@ textarea::placeholder {
 	}
 
 	.header-mobile-wrap {
-		background-color: #18353E;
-		color: #fff;
+		background-color: var(--bgDarkGreen);
+		color: var(--white);;
 		padding: 30px 20px;
 		text-align: center;
 		position: absolute;
@@ -1945,13 +1993,13 @@ textarea::placeholder {
 		content: '';
 		height: 1px;
 		width: 50px;
-		background-color: #48887B;
+		background-color: var(--principalGreen);
 		display: block;
 		margin: 20px auto 0 auto;
 	}
 
 	.def-title.color-white::after {
-		background-color: #fff;
+		background-color: var(--white);;
 	}
 
 	/* All styles END */
