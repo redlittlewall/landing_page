@@ -577,7 +577,7 @@ textarea::placeholder {
 /* Estilo do Card */
 .services-card {
     background-color: var(--white);
-    border: 1px solid var(--borderGray);
+    border: 1px solid var(--darkGreen);
     padding: 40px 35px;
     transition: all 0.3s ease;
     display: flex;
