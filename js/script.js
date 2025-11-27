@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		if (isElementInViewport(jQuery('.num-scroll')[0])) {
 			jQuery('.num-js').each(function () {
 				var targetValue = parseInt(jQuery(this).data('count'));
-				var duration = 2000;
+				var duration = 1500;
 				animateCounter(this, targetValue, duration);
 			});
 
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		if($(this).hasClass('is-active')) {
 			$(this).removeClass('is-active');
-			$(this).text('Show more');
+			$(this).text('Ver mais');
 			galleryItem.each(function() {
 				if($(this).hasClass('is-active')) {
 					$(this).removeClass('is-active');
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 		else {
 			$(this).addClass('is-active');
-			$(this).text('Hide');
+			$(this).text('Ver menos');
 			galleryItem.each(function() {
 				if(!$(this).is(':visible')) {
 					$(this).addClass('is-active');

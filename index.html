@@ -84,7 +84,7 @@
 
 		<div class="modal-form-head">
 			<div class="modal-form-logo">
-				<img src="images/logo-header.svg" alt="Construction">
+				<img src="images/Engeplena Cor.svg" alt="Engeplena Engenharia">
 			</div>
 			<div class="modal-form-close">
 				<img src="images/close.svg" alt="Close">
@@ -92,7 +92,7 @@
 		</div>
 
 		<div class="modal-form-body">
-			<div class="modal-form-title">Solicite um contato</div>
+			<div class="modal-form-title">Solicite um orçamento</div>
 			<form>
 				<input type="text" placeholder="Seu nome*" required>
 				<input type="text" placeholder="Seu telefone*" required>
@@ -142,10 +142,13 @@
 
 			<div class="header-mobile-social">
             	<a href="https://www.instagram.com/engeplena/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-					<img src="images/social-facebook.svg" alt="" aria-hidden="true">
+					<img src="images/instagram-outline.svg" alt="" aria-hidden="true">
 				</a>
 				<a href="https://www.facebook.com/engeplena" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-					<img src="images/social-facebook.svg" alt="" aria-hidden="true">
+					<img src="images/facebook-outline.svg" alt="" aria-hidden="true">
+				</a>
+				<a href="https://www.facebook.com/engeplena" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+					<img src="images/whatsapp-outline.svg" alt="" aria-hidden="true">
 				</a>
 				<a href="mailto:contato@engeplena.com.br" aria-label="Email">
 					<span class="material-symbols-outlined" style="color: white;">mail</span>
@@ -294,9 +297,9 @@
 			<div class="numbers-row num-scroll">
 
 				<div class="numbers-left">
-					<h2 class="def-title color-white wow fadeInLeft" data-wow-delay="0.2s">A Engeplena <br> em números
+					<h2 class="def-title color-white wow fadeInLeft" data-wow-delay="0.2s">A Engeplena em números
 					</h2>
-					<div class="def-desc wow fadeInLeft" data-wow-delay="0.3s">
+					<div class="def-desc color-white  wow fadeInLeft" data-wow-delay="0.3s">
 						Nossos números refletem a solidez de nossa trajetória e a confiança depositada por grandes
 						clientes em Itabirito e em toda a região Central de Minas.
 					</div>
@@ -306,25 +309,25 @@
 					<div class="numbers-item">
 						<div class="numbers-num">+<span class="num-js" data-count="20">0</span></div>
 						<div class="numbers-desc">
-							Anos de Experiência
+							Anos de experiência
 						</div>
 					</div>
 					<div class="numbers-item">
 						<div class="numbers-num">+<span class="num-js" data-count="50">0</span>.000 m²</div>
 						<div class="numbers-desc">
-							de Projetos Estruturais
+							em Projetos estruturais
 						</div>
 					</div>
 					<div class="numbers-item">
 						<div class="numbers-num">+<span class="num-js" data-count="21">0</span>.000 m²</div>
 						<div class="numbers-desc">
-							de Obras Executadas
+							em Obras executadas
 						</div>
 					</div>
 					<div class="numbers-item">
 						<div class="numbers-num">R$ <span class="num-js" data-count="16">0</span> Mi</div>
 						<div class="numbers-desc">
-							em Orçamentos <br> processados
+							em Orçamentos processados
 						</div>
 					</div>
 				</div>
@@ -334,113 +337,93 @@
 	</section>
 
 	<section class="s-services" id="s-services">
+		<!-- 
+			TODO: Alterar fluxo do modal de solicitação de orçamento
+		 	Qual o melhor canal para solicitar cada tipo de orçamento?
+			Enviar cada serviço para um tipo diferente de contato? Zap, email, outro...?
+		-->
 		<div class="container">
 			<h2 class="center-title wow fadeIn" data-wow-delay="0.1s">Nossos serviços</h2>
 
-			<div class="services-row">
+			<div class="services-grid">
 
-				<div class="services-item wow fadeIn" data-wow-delay="0.1s">
-					<div class="services-thumb">
-						<img src="images/service-1.jpg" alt="Construction of houses">
+				<article class="services-card wow fadeInUp" data-wow-delay="0.1s">
+					<div class="card-icon">
+						<span class="material-symbols-outlined">engineering</span>
 					</div>
-					<div class="services-body">
-						<h4 class="services-title">Projetos de Engenharia</h4>
-						<div class="services-desc">
-							Projetos estruturais, hidrossanitários e elétricos com excelência técnica. Mais de 50.000 m²
-							de projetos desenvolvidos com precisão e qualidade.
-						</div>
-						<a href="#modal-form" data-effect="mfp-zoom-in" class="def-btn services-btn">Solicitar
-							orçamento</a>
+					<h3 class="card-title">Projetos de Engenharia</h3>
+					<p class="card-desc">
+						Projetos estruturais, hidrossanitários e elétricos com excelência técnica e precisão acadêmica.
+					</p>
+					<a href="#modal-form" data-effect="mfp-zoom-in" class="card-link services-btn">
+						Solicitar orçamento <span class="material-symbols-outlined icon-arrow">arrow_forward</span>
+					</a>
+				</article>
 
+				<article class="services-card wow fadeInUp" data-wow-delay="0.2s">
+					<div class="card-icon">
+						<span class="material-symbols-outlined">forest</span>
 					</div>
-				</div>
+					<h3 class="card-title">Consultoria Ambiental</h3>
+					<p class="card-desc">
+						Regularização, licenciamento e estudos de impacto ambiental com foco em sustentabilidade.
+					</p>
+					<a href="#modal-form" data-effect="mfp-zoom-in" class="card-link services-btn">
+						Solicitar orçamento <span class="material-symbols-outlined icon-arrow">arrow_forward</span>
+					</a>
+				</article>
 
-				<div class="services-item wow fadeIn" data-wow-delay="0.2s">
-					<div class="services-thumb">
-						<img src="images/service-2.jpg" alt="Ремонт по дому">
+				<article class="services-card wow fadeInUp" data-wow-delay="0.3s">
+					<div class="card-icon">
+						<span class="material-symbols-outlined">print</span>
 					</div>
-					<div class="services-body">
-						<h4 class="services-title">Consultoria Ambiental</h4>
-						<div class="services-desc">
-							Elevate your living space with our top-tier home renovation services. Whether it's a
-							complete subtle enhancements.
-						</div>
-						<a href="#modal-form" data-effect="mfp-zoom-in" class="def-btn services-btn">Solicitar
-							orçamento</a>
+					<h3 class="card-title">Plotagem e Impressão</h3>
+					<p class="card-desc">
+						Impressões técnicas de alta definição para engenharia e arquitetura em grandes formatos.
+					</p>
+					<a href="#modal-form" data-effect="mfp-zoom-in" class="card-link services-btn">
+						Solicitar orçamento <span class="material-symbols-outlined icon-arrow">arrow_forward</span>
+					</a>
+				</article>
 
+				<article class="services-card wow fadeInUp" data-wow-delay="0.4s">
+					<div class="card-icon">
+						<span class="material-symbols-outlined">fire_extinguisher</span>
 					</div>
-				</div>
+					<h3 class="card-title">Combate a Incêndio</h3>
+					<p class="card-desc">
+						Projetos de segurança (AVCB) aprovados pelo Corpo de Bombeiros, garantindo proteção total.
+					</p>
+					<a href="#modal-form" data-effect="mfp-zoom-in" class="card-link services-btn">
+						Solicitar orçamento <span class="material-symbols-outlined icon-arrow">arrow_forward</span>
+					</a>
+				</article>
 
-				<div class="services-item wow fadeIn" data-wow-delay="0.3s">
-					<div class="services-thumb">
-						<img src="images/service-3.jpg" alt="Building design">
+				<article class="services-card wow fadeInUp" data-wow-delay="0.5s">
+					<div class="card-icon">
+						<span class="material-symbols-outlined">description</span>
 					</div>
-					<div class="services-body">
-						<h4 class="services-title">Plotagem e Impressão</h4>
-						<div class="services-desc">
-							Impressões técnicas de alta qualidade para projetos de engenharia e arquitetura. Tecnologia
-							de ponta
-							para resultados perfeitos.
-						</div>
-						<a href="#modal-form" data-effect="mfp-zoom-in" class="def-btn services-btn">Solicitar
-							orçamento</a>
+					<h3 class="card-title">Laudos e Orçamentos</h3>
+					<p class="card-desc">
+						Avaliações técnicas detalhadas e orçamentos assertivos para viabilidade de obras.
+					</p>
+					<a href="#modal-form" data-effect="mfp-zoom-in" class="card-link services-btn">
+						Solicitar orçamento <span class="material-symbols-outlined icon-arrow">arrow_forward</span>
+					</a>
+				</article>
+
+				<article class="services-card wow fadeInUp" data-wow-delay="0.6s">
+					<div class="card-icon">
+						<span class="material-symbols-outlined">apartment</span>
 					</div>
-				</div>
-
-
-
-			</div>
-			<div class="services-row">
-
-				<div class="services-item wow fadeIn" data-wow-delay="0.1s">
-					<div class="services-thumb">
-						<img src="images/service-1.jpg" alt="Construction of houses">
-					</div>
-					<div class="services-body">
-						<h4 class="services-title">Prevenção e Combate a Incêndio</h4>
-						<div class="services-desc">
-							Projetos estruturais, hidrossanitários e elétricos com excelência técnica. Mais de 50.000 m²
-							de projetos desenvolvidos com precisão e qualidade.
-						</div>
-						<a href="#modal-form" data-effect="mfp-zoom-in" class="def-btn services-btn">Solicitar
-							orçamento</a>
-
-					</div>
-				</div>
-
-				<div class="services-item wow fadeIn" data-wow-delay="0.2s">
-					<div class="services-thumb">
-						<img src="images/service-2.jpg" alt="Ремонт по дому">
-					</div>
-					<div class="services-body">
-						<h4 class="services-title">Laudos Técnicos e Orçamentos.</h4>
-						<div class="services-desc">
-							Elevate your living space with our top-tier home renovation services. Whether it's a
-							complete subtle enhancements.
-						</div>
-						<a href="#modal-form" data-effect="mfp-zoom-in" class="def-btn services-btn">Solicitar
-							orçamento</a>
-
-					</div>
-				</div>
-
-				<div class="services-item wow fadeIn" data-wow-delay="0.3s">
-					<div class="services-thumb">
-						<img src="images/service-3.jpg" alt="Building design">
-					</div>
-					<div class="services-body">
-						<h4 class="services-title">Plotagem e Impressão</h4>
-						<div class="services-desc">
-							Impressões técnicas de alta qualidade para projetos de engenharia e arquitetura. Tecnologia
-							de ponta
-							para resultados perfeitos.
-						</div>
-						<a href="#modal-form" data-effect="mfp-zoom-in" class="def-btn services-btn">Solicitar
-							orçamento</a>
-					</div>
-				</div>
-
-
+					<h3 class="card-title">Execução de Obras</h3>
+					<p class="card-desc">
+						Gestão e execução completa da sua obra, do alicerce ao acabamento, com equipe qualificada.
+					</p>
+					<a href="#modal-form" data-effect="mfp-zoom-in" class="card-link services-btn">
+						Solicitar orçamento <span class="material-symbols-outlined icon-arrow">arrow_forward</span>
+					</a>
+				</article>
 
 			</div>
 		</div>
@@ -448,7 +431,7 @@
 
 	<section class="s-gallery" id="s-gallery">
 		<div class="container">
-			<h2 class="center-title wow fadeIn" data-wow-delay="0.1s">Photo gallery</h2>
+			<h2 class="center-title wow fadeIn" data-wow-delay="0.1s">Portifólio</h2>
 
 			<div class="gallery-wrap">
 				<a href="images/gallery-1.jpg" class="gallery-item wow fadeIn" data-effect="mfp-zoom-in"
@@ -509,7 +492,7 @@
 			</div>
 
 			<div class="gallery-btn">
-				<a href="#" class="def-btn wow fadeInUp" data-wow-delay="0.2s">Show more</a>
+				<a href="#" class="def-btn wow fadeInUp" data-wow-delay="0.2s">Ver mais</a>
 			</div>
 
 		</div>
@@ -616,7 +599,7 @@
 
 	<section class="s-reviews" id="s-covenant" style="background-image: url('images/reviews-bg.png');">
 		<div class="container">
-			<h2 class="center-title color-white wow fadeIn" data-wow-delay="0.1s">What clients say</h2>
+			<h2 class="center-title color-white wow fadeIn" data-wow-delay="0.1s">Depoimeentos</h2>
 
 			<div class="swiper reviews-swiper">
 
@@ -868,20 +851,20 @@
 							<div class="footer-info-text">(31) 3561-3966 / 9 8795-0463</div>
 						</a>
 
-						<div class="footer-social">
+						<!-- <div class="footer-social">
 							<a href="https://wa.me/5531987950463">
-								<img src="images/social-facebook.svg" alt="Whatsapp">
+								<img src="images/whatsapp-outline.svg" alt="Whatsapp">
 							</a>
 							<a href="https://www.instagram.com/engeplena/" target="_blank" rel="noopener">
-								<img src="images/social-facebook.svg" alt="Instagram">
+								<img src="images/instagram-outline.svg" alt="Instagram">
 							</a>
 							<a href="https://www.facebook.com/engeplena" target="_blank" rel="noopener">
-								<img src="images/social-facebook.svg" alt="Facebook">
+								<img src="images/facebook-outline.svg" alt="Facebook">
 							</a>
 							<a href="mailto:contato@engeplena.com.br">
-								<img src="images/social-facebook.svg" alt="Email">
+								<img src="images/email-facebook.svg" alt="Email">
 							</a>
-						</div>
+						</div> -->
 
 					</div>
 				</div>
@@ -897,17 +880,18 @@
 	</footer>
 
 	<aside class="social-sidebar" aria-label="Redes Sociais">
-		<a href="https://wa.me/5531987950463" target="_blank" rel="noopener" aria-label="Fale conosco no Whatsapp">
-			<img src="images/social-facebook.svg" alt="" aria-hidden="true">
+
+		<a href="https://wa.me/5531987950463"  target="_blank" rel="noopener" aria-label="Fale conosco no Whatsapp">
+			<img src="images/whatsapp-outline.svg"  alt="" aria-hidden="true">
 		</a>
 		<a href="https://www.instagram.com/engeplena/" target="_blank" rel="noopener" aria-label="Siga-nos no Instagram">
-			<img src="images/social-facebook.svg" alt="" aria-hidden="true">
+			<img src="images/instagram-outline.svg" alt="" aria-hidden="true">
 		</a>
 		<a href="https://www.facebook.com/engeplena" target="_blank" rel="noopener" aria-label="Curta nossa página no Facebook">
-			<img src="images/social-facebook.svg" alt="" aria-hidden="true">
+			<img src="images/facebook-outline.svg" alt="" aria-hidden="true">
 		</a>
 		<a href="mailto:contato@engeplena.com.br" aria-label="Envie um Email">
-			<img src="images/social-facebook.svg" alt="" aria-hidden="true">
+			<img src="images/email-outline.svg" alt="" aria-hidden="true">
 		</a>
 	</aside>
 	<script src="js/jquery-3.7.0.min.js"></script>
