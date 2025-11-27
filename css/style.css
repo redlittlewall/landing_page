@@ -1162,6 +1162,21 @@ a.partners-item:hover .partner-name {
     box-shadow: 0px 10px 20px var(--lightGreen); 
     border-radius: 20px;
 }
+.form-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--darkGreen); 
+    text-align: center;
+    margin-bottom: 30px; 
+    line-height: 1.2;
+}
+
+@media screen and (max-width: 575px) {
+    .form-title {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+}
 
 .form-right form input,
 .form-right form textarea {
@@ -1182,6 +1197,7 @@ a.partners-item:hover .partner-name {
 	display: block;
 	cursor: pointer;
 	padding: 15px 65px;
+	font-weight: bold;
 }
 
 .form-right form input:focus,
@@ -1210,7 +1226,6 @@ a.partners-item:hover .partner-name {
 .footer-left {
 	max-width: 268px;
 	padding: 60px 60px 60px 0;
-	border-right: 1px solid var(--borderWhiteOp);
 }
 
 .footer-logo {
@@ -1249,6 +1264,16 @@ a.partners-item:hover .partner-name {
 	color: var(--white);;
 }
 
+.footer-nav .footer-info-item {
+    margin-bottom: 15px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.footer-nav .footer-info-item:hover {
+    transform: translateX(5px);
+}
+
 .footer-info-item {
 	display: flex;
 	align-items: center;
@@ -1263,10 +1288,22 @@ a.partners-item:hover .partner-name {
 }
 
 .footer-info-icon img {
-	vertical-align: middle;
-	transform: translateY(-2px);
+	width: 20px; 
+    height: auto;
+    vertical-align: middle;
+    filter: brightness(0) invert(1);
+    opacity: 0.6; 
+    transition: opacity 0.3s ease;
 }
 
+.footer-info-item:hover .footer-info-text {
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.footer-info-item:hover .footer-info-icon img {
+    opacity: 1; /* Brilho no ícone ao passar o mouse */
+}
 .footer-social {
 	display: flex;
 	column-gap: 30px;
@@ -1288,6 +1325,29 @@ a.partners-item:hover .partner-name {
 	padding: 24px 0 30px 0;
 	text-align: center;
 	color: var(--textOffWhite);
+}
+
+.copyright-text{
+	font-weight: 500;
+}
+
+.powered-by {
+    font-size: 14px;
+    margin-top: 10px;
+    color: var(--textLightGray);
+    font-weight: 400;
+}
+
+.powered-by a {
+    color: var(--textOffWhite);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border-bottom: 1px dotted var(--textLightGray);
+}
+
+.powered-by a:hover {
+    color: var(--principalGreen);
+    border-bottom-color: var(--principalGreen);
 }
 
 /* Footer END */

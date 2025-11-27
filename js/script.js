@@ -218,6 +218,38 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 	// Reviews END
 
+	// WhatsApp Form Integration START
+	const contactForm = document.getElementById('contact-form');
+	
+	if (contactForm) {
+		contactForm.addEventListener('submit', function(e) {
+			e.preventDefault(); 
+
+			const nome = document.getElementById('form-nome').value;
+			const telefone = document.getElementById('form-telefone').value;
+			const email = document.getElementById('form-email').value;
+			const mensagem = document.getElementById('form-mensagem').value;
+
+			const whatsappNumber = "5531987950463";
+
+			let text = `*Olá! Vim pelo site da Engeplena.*%0A%0A`;
+			text += `*Nome:* ${nome}%0A`;
+			if(telefone) text += `*Telefone:* ${telefone}%0A`;
+			if(email) text += `*Email:* ${email}%0A`;
+			if(mensagem) text += `*Mensagem:*%0A${mensagem}`;
+
+			const url = `https://wa.me/${whatsappNumber}?text=${text}`; 
+            
+            const finalUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text.replace(/%0A/g, '\n'))}`;
+
+			window.open(finalUrl, '_blank');
+            
+            contactForm.reset();
+		});
+	}
+	// WhatsApp Form Integration END
+
+
 	// 3D SOLID DRAG/ROTATE START (D3 + Lodash)
 	// Certifique-se de ter:
 	// <script src="https://d3js.org/d3.v5.min.js"></script>
