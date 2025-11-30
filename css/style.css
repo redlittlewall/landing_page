@@ -349,6 +349,20 @@ textarea::placeholder {
         min-height: 475px; /* Ajuste conforme a altura real da sua imagem mobile */
     }
 }
+.swiper-slide .slide-bg {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1920 / 850; /* A proporção baseada nas dimensões da imagem */
+    object-fit: cover;
+}
+
+/* Ajuste para mobile se necessário */
+@media (max-width: 600px) {
+    .swiper-slide .slide-bg {
+        aspect-ratio: 600 / 600; /* Coloque aqui a proporção da sua imagem mobile real */
+    }
+}
+
 .banner-swiper:hover .swiper-button-next,
 .banner-swiper:hover .swiper-button-prev {
 	transform: none;
