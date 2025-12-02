@@ -77,19 +77,22 @@ document.addEventListener('DOMContentLoaded', () => {
 			rect.right <= (window.innerWidth || document.documentElement.clientWidth)
 		);
 	}
-
+	var counterStarted = false //Garante que só chama o counter uma vez
 	jQuery(window).on('scroll', function () {
+		if(counterStarted) return;
 		if (isElementInViewport(jQuery('.num-scroll')[0])) {
 			jQuery('.num-js').each(function () {
 				var targetValue = parseInt(jQuery(this).data('count'));
-				var duration = 1500;
+				var duration = 1750;
 				animateCounter(this, targetValue, duration);
+				counterStarted=true;
+
 			});
 
 			jQuery(window).off('scroll.counter');
 		}
 	});
-
+	
 	jQuery(window).trigger('scroll');
 	// Number counter END
 
