@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM7.005 9C7.005 8.45 7.45 8 8 8H16C16.55 8 17 8.45 17 9V15C17 15.55 16.55 16 16 16H8C7.45 16 7 15.55 7 15L7.005 9ZM12 12.5L8.00001 9.99997V15H16V9.99997L12 12.5ZM12 11.5L8.00001 9.00001H16L12 11.5Z" fill="#000000"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="666.66669"
+   height="666.66669"
+   viewBox="0 0 20.000001 20.000001"
+   fill="none"
+   version="1.1"
+   id="svg4"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <path
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     d="M 20,10 C 20,15.5228 15.5228,20 10,20 4.47715,20 0,15.5228 0,10 0,4.47715 4.47715,0 10,0 15.5228,0 20,4.47715 20,10 Z M 5.005,7 C 5.005,6.45 5.45,6 6,6 h 8 c 0.55,0 1,0.45 1,1 v 6 c 0,0.55 -0.45,1 -1,1 H 6 C 5.45,14 5,13.55 5,13 Z M 10,10.5 6.00001,7.99997 V 13 H 14 V 7.99997 Z M 10,9.5 6.00001,7.00001 H 14 Z"
+     fill="#000000"
+     id="path2" />
 </svg>
