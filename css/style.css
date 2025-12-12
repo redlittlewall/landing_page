@@ -119,6 +119,8 @@ input::placeholder, textarea::placeholder { color: var(--textLightGray); }
 
 /* --- HEADER --- */
 .header-mobile { display: none; }
+.header-mobile-social img{ height: 25px; width: 25px; color: var(--white);filter:brightness(0) invert(1);}
+
 
 .header-menu {
     position: fixed;
@@ -604,6 +606,7 @@ input::placeholder, textarea::placeholder { color: var(--textLightGray); }
 }
 .why-left { flex: 1; }
 .why-left-desc { color: var(--textGray); margin-bottom: 50px; margin-left: 30px; }
+.why-features{padding-left: 25px;}
 .why-features-item { display: flex; margin-bottom: 40px; width: 100%; }
 .why-features-item:last-child { margin-bottom: 0; }
 .why-features-icon { margin-right: 20px; flex-shrink: 0; margin-top: 5px; }
@@ -895,12 +898,11 @@ a.partners-item:hover .partner-name { color: var(--principalGreen); }
         width: auto;
     }
     .numbers-right { width: auto; grid-template-columns: repeat(2, 1fr); row-gap: 25px; }
-    .numbers-num { font-size: 36px; }
+    .numbers-num { font-size: 28px; }
     .numbers-desc { font-size: 14px; }
     .s-services { padding: 60px 0; }
     .services-row { column-gap: 20px; }
     .services-title { font-size: 18px; line-height: 1.5; }
-    .services-btn { padding: 10px 25px; }
     .s-why { padding: 60px 0; }
     .why-row { display: block; flex-direction: column; column-gap: 0; }
     .why-header { text-align: center; margin-left: auto; margin-right: auto; margin-bottom: 40px; }
